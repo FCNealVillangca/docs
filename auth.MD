@@ -1,32 +1,34 @@
 # To Check List for Basic Authentication:
 ## sign up
 ### on load
-- [ ] if auth redirect to homepage with a flash message "you're already signed in"
+- [x] if auth redirect to homepage with a flash message "you're already signed in"
 ### on submit
-- [ ] check if all fields are valid and not empty
-- [ ] activate loading on submit 
-- [ ] check if email exist if yes return an error message under email field and turn off loading.
-- [ ] check if user exist if yes return an error message under username field and turn off loading.
+- [x] check if all fields are valid and not empty
+- [x] activate loading on submit 
+- [x] disable all button and input when loading is on
+- [x] check if email exist if yes return an error message under email field and turn off loading.
+- [x] check if user exist if yes return an error message under username field and turn off loading.
 ### database
-- [ ] save the email and password on the accounts table.
-- [ ] save the username, about, first name and lastname on the user table.
+- [x] save the email and password on the accounts table.
+- [x] send verification link to account's email.
+- [x] save the username, about, first name and lastname on the user table.
 ### on error
-- [ ] redirect to "/", return flash a error message
+- [x] redirect to "/", return flash a error message
 ### on success
-- [ ] redirect to "/", send email verification link, and flash a success message
+- [x] redirect to sign in page and flash a success message
 ## sign in
 ### on load
-- [ ] when routing to sign in page add "?previous=< currentpath >"
-- [ ] if auth redirect to homepage with a flash message "you're already signed in"
+- [x] when routing to sign in page add "?previous=< currentpath >"
+- [x] if auth redirect to homepage with a flash message "you're already signed in"
 ### on submit
-- [ ] check if all fields are valid and not empty
+- [x] check if all fields are valid and not empty
+- [x] disable all button and input when loading is on
 ### on error
-- [ ] check if the email and password match and if not return flash error message that the password or email is invalid
+- [x] check if the email and password match and if not return flash error message that the password or email is invalid
 ### on success
-- [ ] after signing in redirect to the value of ?previous=< url > or "/"
-- [ ] if user is not verified redirect to resend verification with flash message 
-- [ ] if user is verified and doesn't have a user in database redirect to update profile page
-
+- [x] after signing in redirect to the value of ?previous=< url > or "/"
+- [x] if user is not verified redirect to resend verification with flash message 
+- [x] if user is verified and doesn't have a user in database redirect to update profile page
 ## resend verification
 ### on load
 - [ ] if not auth redirect to sign in with error flash message "you're not logged in"
